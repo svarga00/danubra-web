@@ -72,3 +72,18 @@
   from = "/cs/kontakt"
   to = "/cs/kontakt.html"
   status = 200
+
+[[redirects]]
+  from = "/hu/dopyt"
+  to = "/hu/dopyt.html"
+  status = 200
+
+[[redirects]]
+  from = "/hu/pre-agentury"
+  to = "/hu/pre-agentury.html"
+  status = 200
+
+[[redirects]]
+  from = "/hu/kontakt"
+  to = "/hu/kontakt.html"
+  status = 200
