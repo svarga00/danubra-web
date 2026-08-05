@@ -863,3 +863,9 @@
 .price-note b{color:var(--navy);font-weight:600}
 @media(max-width:980px){.cennik{grid-template-columns:1fr;gap:36px}}
 @media(max-width:560px){.price-grid2{grid-template-columns:1fr}.price-amount{font-size:44px}}
+.price-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card h3{font-family:'Space Grotesk';font-size:19px;font-weight:500;color:var(--navy);margin-bottom:9px}
+.price-card .cico{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
+  background:linear-gradient(135deg,#FFF2E6,#FFE2C9)}
+.price-card .cico svg{width:20px;height:20px;stroke:var(--orange);fill:none}
+@media(max-width:860px){.price-grid3{grid-template-columns:1fr}}
