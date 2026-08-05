@@ -43,3 +43,27 @@
   for = "/styl.css"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# ==========================================================
+# DOČASNÉ — bráni vyhľadávačom indexovať rozostavaný web.
+# PRED SPUSTENÍM CELÝ TENTO BLOK ZMAŽ.
+# ==========================================================
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[redirects]]
+  from = "/cs/dopyt"
+  to = "/cs/dopyt.html"
+  status = 200
+
+[[redirects]]
+  from = "/cs/pre-agentury"
+  to = "/cs/pre-agentury.html"
+  status = 200
+
+[[redirects]]
+  from = "/cs/kontakt"
+  to = "/cs/kontakt.html"
+  status = 200
