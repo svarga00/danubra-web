@@ -820,12 +820,26 @@
 }
 
 /* ===== PREPÍNAČ JAZYKOV ===== */
-.langsw{display:flex;align-items:center;gap:2px;margin-right:8px;padding:3px;
-  background:var(--bg-soft);border:1px solid var(--line);border-radius:10px}
-.langsw a{display:flex;align-items:center;gap:6px;padding:5px 9px;border-radius:7px;
-  font-size:12.5px;font-weight:600;color:var(--ink-2);letter-spacing:.02em;
-  transition:background .15s,color .15s;line-height:1}
-.langsw a:hover{background:#fff;color:var(--navy)}
-.langsw a.on{background:#fff;color:var(--navy);box-shadow:var(--sh-sm)}
-.langsw .flagicon{width:18px;height:12px}
-@media(max-width:1180px){.langsw a span{display:none}.langsw a{padding:6px}}
+.lang{position:relative;margin-right:4px}
+.lang-btn{display:flex;align-items:center;gap:7px;padding:8px 10px;border:1px solid transparent;
+  border-radius:10px;background:transparent;cursor:pointer;font-family:inherit;
+  transition:background .15s,border-color .15s}
+.lang-btn:hover{background:var(--bg-soft);border-color:var(--line)}
+.lang.on .lang-btn{background:var(--bg-soft);border-color:var(--line)}
+.lang-btn .flagicon{width:20px;height:14px}
+.lang-kod{font-size:13px;font-weight:600;color:var(--navy);letter-spacing:.03em;line-height:1}
+.lang-chev{width:13px;height:13px;color:var(--ink-2);transition:transform .2s}
+.lang.on .lang-chev{transform:rotate(180deg)}
+.lang-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:186px;padding:6px;
+  background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh-lg);
+  opacity:0;visibility:hidden;transform:translateY(-6px);z-index:95;
+  transition:opacity .2s,transform .2s,visibility .2s}
+.lang.on .lang-menu{opacity:1;visibility:visible;transform:none}
+.lang-menu a{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:9px;
+  font-size:14.5px;color:var(--navy);white-space:nowrap;transition:background .15s}
+.lang-menu a:hover{background:var(--bg-soft)}
+.lang-menu a[aria-current]{font-weight:600}
+.lang-menu a[aria-current]::after{content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--orange);margin-left:auto;flex:none}
+.lang-menu .flagicon{width:22px;height:15px}
+@media(max-width:520px){.lang-kod{display:none}.lang-btn{padding:8px}}
