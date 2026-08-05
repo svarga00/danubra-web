@@ -869,3 +869,8 @@
   background:linear-gradient(135deg,#FFF2E6,#FFE2C9)}
 .price-card .cico svg{width:20px;height:20px;stroke:var(--orange);fill:none}
 @media(max-width:860px){.price-grid3{grid-template-columns:1fr}}
+.price-card--sub{margin-top:20px;background:var(--navy);border-color:var(--navy)}
+.price-card--sub .price-tag{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
+.price-card--sub .price-amount{color:#fff;font-size:40px}
+.price-card--sub .price-amount small{font-family:'Inter';font-size:16px;font-weight:500;color:#9aa3bf;letter-spacing:0}
+.price-card--sub p{color:#b6c0d6}
