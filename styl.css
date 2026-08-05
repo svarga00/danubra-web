@@ -843,3 +843,23 @@
   background:var(--orange);margin-left:auto;flex:none}
 .lang-menu .flagicon{width:22px;height:15px}
 @media(max-width:520px){.lang-kod{display:none}.lang-btn{padding:8px}}
+
+/* ===== CENNÍK ===== */
+.cennik{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.price-grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 28px;
+  box-shadow:var(--sh-sm);transition:transform .3s var(--e,cubic-bezier(.16,1,.3,1)),box-shadow .3s}
+.price-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.price-card--hot{border:2px solid var(--orange);box-shadow:0 4px 16px rgba(240,126,34,.15),var(--sh-md)}
+.price-tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-2);background:var(--bg-soft);border:1px solid var(--line);
+  padding:5px 12px;border-radius:999px;margin-bottom:20px}
+.price-card--hot .price-tag{color:var(--orange);background:linear-gradient(135deg,#FFF1E4,#FFE1C6);border-color:#F6D8BF}
+.price-amount{font-family:'Space Grotesk';font-weight:700;font-size:52px;line-height:1;
+  letter-spacing:-.035em;color:var(--navy);margin-bottom:16px}
+.price-card p{color:var(--ink-2);font-size:15.5px;line-height:1.55}
+.price-note{margin-top:26px;background:linear-gradient(135deg,#FFF8F1,#FFF3E7);
+  border:1px solid #F6DFC6;border-radius:16px;padding:22px 26px;font-size:15.5px;color:var(--ink-2)}
+.price-note b{color:var(--navy);font-weight:600}
+@media(max-width:980px){.cennik{grid-template-columns:1fr;gap:36px}}
+@media(max-width:560px){.price-grid2{grid-template-columns:1fr}.price-amount{font-size:44px}}
