@@ -731,10 +731,10 @@
       e.preventDefault();
       var b=f.querySelector('.cta');
       if(!f.checkValidity()){ f.reportValidity(); return; }
-      b.disabled=true; b.textContent='Odosielam…';
+      b.disabled=true; b.textContent='Odesílám…';
       odosliFormular(f)
-        .then(function(r){ if(!r.ok) throw 0; b.textContent='Ďakujeme — ozveme sa'; })
-        .catch(function(){ b.disabled=false; b.textContent='Skúsiť znova'; });
+        .then(function(r){ if(!r.ok) throw 0; b.textContent='Děkujeme — ozveme se'; })
+        .catch(function(){ b.disabled=false; b.textContent='Zkusit znovu'; });
     });
   })();
 
@@ -781,7 +781,7 @@
   (function(){
     var box=document.getElementById('rot'), el=document.getElementById('rotIn');
     if(!box||!el) return;
-    var slova=['v Nemecku?','v Rakúsku?','vo Švajčiarsku?','v Luxembursku?','v Česku?','v Maďarsku?'];
+    var slova=['v Německu?','v Rakousku?','ve Švýcarsku?','v Lucembursku?','v Česku?','v Maďarsku?'];
     var m=document.createElement('span'); m.className='rot-measure'; box.appendChild(m);
     function sirka(t){ m.textContent=t; return m.getBoundingClientRect().width; }
     function nastav(t){ box.style.width=sirka(t)+'px'; }

@@ -269,7 +269,7 @@
     var bars=f.querySelectorAll('.wz-bar div');
     var back=document.getElementById('wzBack'), next=document.getElementById('wzNext');
     var title=document.getElementById('wzTitle'), count=document.getElementById('wzCount');
-    var names=['Kto sa pýta','Kam a kedy','Aké ubytovanie hľadáte'];
+    var names=['Kdo se ptá','Kam a kdy','Jaké ubytování hledáte'];
     var i=0;
 
     var q=new URLSearchParams(location.search);
@@ -285,10 +285,10 @@
       steps.forEach(function(s,k){s.classList.toggle('on',k===n)});
       [].forEach.call(bars,function(b,k){b.classList.toggle('on',k<=n)});
       title.textContent=names[n];
-      count.textContent='Krok '+(n+1)+' z 3';
+      count.textContent='Krok '+(n+1)+' ze 3';
       back.style.visibility = n===0 ? 'hidden' : 'visible';
       var cb=document.getElementById('consentBox'); if(cb) cb.style.display = n===2 ? 'flex' : 'none';
-      next.innerHTML = n===2 ? 'Odoslať dopyt' : 'Pokračovať <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+      next.innerHTML = n===2 ? 'Odeslat poptávku' : 'Pokračovat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
       f.scrollIntoView({behavior:'smooth',block:'start'});
     }
     back.onclick=function(){ if(i>0) show(i-1); };
@@ -322,15 +322,15 @@
         document.getElementById('wzDone').classList.add('on');
       }
 
-      next.disabled=true; next.textContent='Odosielam…';
+      next.disabled=true; next.textContent='Odesílám…';
       var poziadavka = ENDPOINT
         ? fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
         : odosliFormular(f);
       poziadavka
         .then(function(r){ if(!r.ok) throw new Error(r.status); hotovo(); })
         .catch(function(){
-          next.disabled=false; next.innerHTML='Skúsiť znova';
-          alert('Dopyt sa nepodarilo odoslať. Skúste to prosím znova alebo nám zavolajte na +421 000 000 000.');
+          next.disabled=false; next.innerHTML='Zkusit znovu';
+          alert('Poptávku se nepodařilo odeslat. Zkuste to prosím znovu nebo nám zavolejte na +421 000 000 000.');
         });
     };
   })();

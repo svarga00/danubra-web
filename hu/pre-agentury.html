@@ -251,10 +251,10 @@
       e.preventDefault();
       var b=f.querySelector('.cta');
       if(!f.checkValidity()){ f.reportValidity(); return; }
-      b.disabled=true; b.textContent='Odosielam…';
+      b.disabled=true; b.textContent='Küldés…';
       odosliFormular(f)
-        .then(function(r){ if(!r.ok) throw 0; b.textContent='Ďakujeme — ozveme sa'; })
-        .catch(function(){ b.disabled=false; b.textContent='Skúsiť znova'; });
+        .then(function(r){ if(!r.ok) throw 0; b.textContent='Köszönjük — jelentkezünk'; })
+        .catch(function(){ b.disabled=false; b.textContent='Újrapróbálás'; });
     });
   })();
 

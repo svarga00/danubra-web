@@ -61,7 +61,7 @@
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="tag reveal in"><span class="pulse"></span>Szállás kiküldött munkavállalóknak · DE · AT · CH · LU · CZ · HU</span>
-      <h1 class="reveal in d1">Szállás kell <em>szállás</em><br class="hbr">az embereinek<br class="hbr"><span class="rot" id="rot"><span class="rot-in" id="rotIn">Németországban?</span></span></h1>
+      <h1 class="reveal in d1"><em>Szállás</em> kell<br class="hbr">az embereinek<br class="hbr"><span class="rot" id="rot"><span class="rot-in" id="rotIn">Németországban?</span></span></h1>
       <p class="lead reveal in d2">Szerelésre és szezonra küld ki embereket? Ne esténként intézze. Megkeressük és elintézzük a szállást a munkahely közelében — a keresést, a telefonálást, az ajánlatok ellenőrzését és a szállásadóval való teljes kommunikációt mi vállaljuk. Ön megkapja a leegyeztetett szállást és az elérhetőséget, ahol az emberei jelentkeznek.</p>
       <div class="hero-actions reveal in d3">
         <a href="dopyt.html" class="cta cta-lg">Igénylés küldése <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -731,10 +731,10 @@
       e.preventDefault();
       var b=f.querySelector('.cta');
       if(!f.checkValidity()){ f.reportValidity(); return; }
-      b.disabled=true; b.textContent='Odosielam…';
+      b.disabled=true; b.textContent='Küldés…';
       odosliFormular(f)
-        .then(function(r){ if(!r.ok) throw 0; b.textContent='Ďakujeme — ozveme sa'; })
-        .catch(function(){ b.disabled=false; b.textContent='Skúsiť znova'; });
+        .then(function(r){ if(!r.ok) throw 0; b.textContent='Köszönjük — jelentkezünk'; })
+        .catch(function(){ b.disabled=false; b.textContent='Újrapróbálás'; });
     });
   })();
 
@@ -781,7 +781,7 @@
   (function(){
     var box=document.getElementById('rot'), el=document.getElementById('rotIn');
     if(!box||!el) return;
-    var slova=['v Nemecku?','v Rakúsku?','vo Švajčiarsku?','v Luxembursku?','v Česku?','v Maďarsku?'];
+    var slova=['Németországban?','Ausztriában?','Svájcban?','Luxemburgban?','Csehországban?','Magyarországon?'];
     var m=document.createElement('span'); m.className='rot-measure'; box.appendChild(m);
     function sirka(t){ m.textContent=t; return m.getBoundingClientRect().width; }
     function nastav(t){ box.style.width=sirka(t)+'px'; }
