@@ -720,8 +720,7 @@
     .darkband .claim{padding:48px 0 64px}
   }
 
-  .hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
-
+  
 /* ================================================================
    MOBILNÉ ZOBRAZENIE — doladenie
    ================================================================ */
@@ -1015,4 +1014,41 @@
   .price-amount{font-size:34px}
   .claim h2{font-size:26px}
   .mapwrap{padding:14px;border-radius:14px}
+}
+
+/* ==========================================================
+   ZABRÁNENIE VODOROVNÉMU POSÚVANIU
+   ========================================================== */
+
+/* 1. Pasca na roboty už nesiaha 9999 px mimo stránku.
+      Namiesto toho je orezaná na nulový bod. */
+.hp{position:absolute;width:1px;height:1px;padding:0;margin:-1px;left:auto;
+  overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+
+/* 2. Mapa: popisky miest presahovali plátno */
+.map-svg{overflow:hidden}
+
+/* 3. Obaly, ktoré mali dekoráciu s odsadením do mínusu */
+.hero{overflow:hidden}
+.hero-visual{overflow:visible}
+.page-head{overflow:hidden}
+
+/* 4. Poistky proti pretečeniu obsahu */
+html{overflow-x:clip}
+body{overflow-x:clip}
+img,svg,video,iframe{max-width:100%}
+.wrap{width:100%;box-sizing:border-box}
+.doc p,.doc li,.faq p,.gcard p,.price-card p,.claim-lead,.lead-head .desc{overflow-wrap:break-word}
+.doc a,.modal-line,.contact-lines a{overflow-wrap:anywhere}
+
+/* 5. Prvky v mriežkach sa nesmú rozťahovať nad rámec stĺpca */
+.pain > *,.proc > *,.cases > *,.why-grid > *,.geo > *,.flow > *,
+.steps > *,.price-grid2 > *,.price-grid3 > *,.stats-in > *,.hero-grid > *{min-width:0}
+
+@media(max-width:900px){
+  /* dekoračné škvrny na malom displeji len prekážajú */
+  .hero-blob,.hero-blob2,.glow,.arc,.dotgrid{display:none}
+  .stats,.band{margin:0}
+  .pstep::after{display:none}
+  .claim-arc{display:none}
 }
