@@ -874,3 +874,145 @@
 .price-card--sub .price-amount{color:#fff;font-size:40px}
 .price-card--sub .price-amount small{font-family:'Inter';font-size:16px;font-weight:500;color:#9aa3bf;letter-spacing:0}
 .price-card--sub p{color:#b6c0d6}
+
+/* ==========================================================
+   MOBILNÁ VERZIA — jednotný prechod, prepisuje staršie pravidlá
+   ========================================================== */
+
+/* mestá v kartách sú odkazy */
+.chips a{display:inline-block;font-size:14px;color:var(--navy);background:var(--bg-soft);
+  border:1px solid var(--line);padding:7px 13px;border-radius:999px;transition:all .15s}
+.chips a:hover{background:#fff;border-color:var(--orange);color:var(--orange)}
+
+@media(max-width:900px){
+  /* --- vzdušnosť --- */
+  section{padding:64px 0}
+  .wrap{padding:0 20px}
+  .lead-head{margin-bottom:32px}
+  .lead-head h2{font-size:clamp(25px,6.4vw,34px)}
+  .lead-head .desc{font-size:16px}
+
+  /* --- hlavička --- */
+  nav .nav-in{height:64px;gap:10px}
+  .logo .logo-svg{height:22px}
+  .nav-r .cta{padding:11px 15px;font-size:14px}
+  .lang{margin-right:0}
+  .lang-menu{right:-6px;min-width:170px}
+  .navmenu{top:64px}
+
+  /* --- hero --- */
+  .hero{padding-top:34px}
+  .hero-grid{gap:34px}
+  .hero h1{font-size:clamp(31px,8.4vw,44px);line-height:1.06}
+  .hero .lead{font-size:16.5px}
+  .hero-actions{gap:10px}
+  .hero-actions .cta{flex:1;justify-content:center;min-width:0}
+  .hero-photo{aspect-ratio:4/3.2;border-radius:16px}
+  .float-card{left:12px;right:12px;bottom:12px;padding:14px 16px}
+  .float-top{right:12px;top:12px;padding:10px 14px}
+  .float-top .n{font-size:20px}
+  .slide-cap{left:12px;top:12px;font-size:11.5px;padding:6px 10px;max-width:62%}
+  .dots{right:12px;bottom:12px}
+  .langs{font-size:13.5px}
+
+  /* --- pás istôt: pod seba, čitateľne --- */
+  .strip-in{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;justify-items:start}
+  .strip-in .s{font-size:13.5px;align-items:flex-start}
+
+  /* --- mapa: na dotyk sa neovláda, necháme ju ako obrázok --- */
+  .mapwrap{padding:20px;border-radius:18px}
+  .map-side h3{font-size:19px}
+  .map-side p{font-size:14.5px}
+  .map-legend li{font-size:13.5px;padding:7px 0}
+  .land-lbl{font-size:17px}
+  .land-lbl.is-plus{font-size:15px}
+  .pin-hit{display:none}
+  .pin{pointer-events:none}
+  .pin-dot{r:5}
+  .pin-lbl{display:none}
+  .map-hint{font-size:12.5px}
+
+  /* --- karty krajín --- */
+  .gcard{padding:24px}
+  .gcard .ghead{min-height:0}
+  .gcard .flag h3{font-size:18px}
+  .chips a{font-size:13.5px;padding:6px 11px}
+  .gcard-cta .ctabar{flex-direction:column}
+  .gcard-cta .ctabar .cta{width:100%;min-width:0}
+
+  /* --- čísla --- */
+  .stats{padding:30px 22px;border-radius:20px;margin:0}
+  .stats-in{grid-template-columns:1fr 1fr;gap:24px 16px}
+  .stat-n{font-size:32px;margin-bottom:6px}
+  .stat-l{font-size:14.5px}
+  .stat-s{font-size:12.5px}
+
+  /* --- tmavý blok a tvrdenie --- */
+  .darkband .how-in{padding:56px 0 40px}
+  .b2b-list li{font-size:15px;padding:13px 0;flex-direction:column;align-items:flex-start;gap:3px}
+  .b2b-list em{text-align:left;font-size:13px}
+  .claim-lead{font-size:16px}
+  .claim-note{margin-top:24px;padding-top:20px}
+  .claim-note span{font-size:14.5px}
+
+  /* --- cena --- */
+  .price-grid2{grid-template-columns:1fr;gap:14px}
+  .price-card{padding:24px 22px}
+  .price-amount{font-size:40px}
+  .price-card--sub .price-amount{font-size:32px}
+  .price-note{padding:18px 20px;font-size:14.5px}
+
+  /* --- otázky --- */
+  .faq summary{font-size:16.5px;padding:18px 0;gap:14px}
+  .faq p{font-size:15.5px;padding-bottom:20px}
+
+  /* --- pätička --- */
+  .foot{flex-direction:column;align-items:flex-start;gap:22px}
+  .fl{gap:14px 20px;font-size:14px}
+  .foot-b{flex-direction:column;align-items:flex-start;gap:12px;font-size:12.5px}
+  .foot-legal{gap:14px}
+
+  /* --- formulár --- */
+  .page-head{padding:40px 0 28px}
+  .page-head h1{font-size:clamp(27px,7.4vw,36px)}
+  .page-head .lead{font-size:16px}
+  .wizard{padding:22px 18px;border-radius:16px}
+  .fset{padding:20px 16px;border-radius:14px}
+  .fset-h{margin-bottom:18px;padding-bottom:13px}
+  .wz-top h2{font-size:20px}
+  .wz-nav{flex-direction:column-reverse;gap:10px}
+  .wz-nav .cta{width:100%;justify-content:center}
+  .opt > span{min-height:60px;padding:13px 42px 13px 14px}
+  .side-note{padding:22px 20px}
+
+  /* --- právne dokumenty --- */
+  .doc h2{font-size:20px;margin:32px 0 12px;padding-top:20px}
+  .doc h3{font-size:16px}
+  .doc p,.doc ul,.doc ol{font-size:15.5px}
+  .doc-toc{padding:18px 20px;columns:1}
+
+  /* --- vyskakovacie okno ako spodný panel --- */
+  .modal{padding:0;align-items:end}
+  .modal-box{width:100%;border-radius:20px 20px 0 0;padding:26px 22px 30px;
+    animation:sheetin .3s cubic-bezier(.16,1,.3,1)}
+  @keyframes sheetin{from{transform:translateY(100%)}to{transform:none}}
+}
+
+@media(max-width:480px){
+  section{padding:52px 0}
+  .wrap{padding:0 16px}
+  .hero h1{font-size:30px}
+  .hero-actions{flex-direction:column}
+  .hero-actions .cta{width:100%}
+  .strip-in{grid-template-columns:1fr;gap:11px}
+  .stats-in{grid-template-columns:1fr;gap:20px}
+  .stats-in > div{padding:0}
+  .stats-in > div + div{padding-left:0;border-left:none;border-top:1px solid rgba(255,255,255,.14);padding-top:20px}
+  .opts{grid-template-columns:1fr}
+  .grid2,.grid3,.frow{grid-template-columns:1fr}
+  .cases,.steps,.flow,.why-grid,.pain,.geo,.price-grid3{grid-template-columns:1fr}
+  .nav-r .cta{padding:10px 13px}
+  .price-amount{font-size:34px}
+  .claim h2{font-size:26px}
+  .mapwrap{padding:14px;border-radius:14px}
+}
