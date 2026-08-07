@@ -1,4 +1,4 @@
+# DOČASNÉ — web ešte nie je spustený.
+# Pred spustením nahraď obsahom súboru robots-po-spusteni.txt
 User-agent: *
-Allow: /
-
-Sitemap: https://danubra.sk/sitemap.xml
+Disallow: /
