@@ -87,3 +87,23 @@
   from = "/hu/kontakt"
   to = "/hu/kontakt.html"
   status = 200
+
+[[redirects]]
+  from = "/cs/obchodne-podmienky"
+  to = "/cs/obchodne-podmienky.html"
+  status = 200
+
+[[redirects]]
+  from = "/cs/ochrana-osobnych-udajov"
+  to = "/cs/ochrana-osobnych-udajov.html"
+  status = 200
+
+[[redirects]]
+  from = "/hu/obchodne-podmienky"
+  to = "/hu/obchodne-podmienky.html"
+  status = 200
+
+[[redirects]]
+  from = "/hu/ochrana-osobnych-udajov"
+  to = "/hu/ochrana-osobnych-udajov.html"
+  status = 200
