@@ -691,8 +691,7 @@
     .nav-r a.lnk{display:none}
     .navburger{display:grid}
   }
-  @media(max-width:520px){.nav-r .cta span{display:none}}
-
+  
   /* karta s výzvou v prehľade krajín */
   .gcard-cta{grid-column:span 2;background:var(--navy);border-color:var(--navy)}
   .gcard-cta::before{display:none}
@@ -1051,4 +1050,19 @@ img,svg,video,iframe{max-width:100%}
   .stats,.band{margin:0}
   .pstep::after{display:none}
   .claim-arc{display:none}
+}
+
+/* ===== TLAČIDLO V HLAVIČKE: dva varianty textu ===== */
+.cta-nav .t-short{display:none}
+@media(max-width:900px){
+  .cta-nav .t-long{display:none}
+  .cta-nav .t-short{display:inline}
+  .cta-nav{padding:11px 16px;font-size:14.5px;gap:7px}
+  .cta-nav svg{width:14px;height:14px}
+}
+@media(max-width:420px){
+  .cta-nav{padding:10px 13px;font-size:14px}
+  .cta-nav svg{display:none}
+  .logo .logo-svg{height:20px}
+  nav .nav-in{gap:8px}
 }
