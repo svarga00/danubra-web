@@ -11,7 +11,7 @@
 <meta name="description" content="Jak Danubra zpracovává osobní údaje z poptávkového formuláře a komunikace.">
 <!-- DOČASNÉ: pred spustením zmaž nasledujúci riadok -->
 <meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="../styl.css?v=10">
+<link rel="stylesheet" href="../styl.css?v=11">
 </head>
 <body>
 
@@ -131,7 +131,14 @@
 
     <h2 id="g8">8. Cookies a měření návštěvnosti</h2>
     <p>Web používá technické soubory cookies nezbytné pro jeho fungování. Ty nevyžadují souhlas.</p>
-    <p>Web nepoužívá reklamní ani sledovací nástroje třetích stran a neukládá cookies k profilování návštěvníků. Pokud bychom v budoucnu nasadili měření návštěvnosti, doplníme jej do tohoto dokumentu a v případě potřeby zobrazíme lištu se souhlasem.</p>
+    <h3>Nezbytné cookies</h3>
+    <p>Web ukládá jeden údaj o tom, jakou volbu jste provedli v liště se souhlasem. Bez něj bychom se vás ptali při každé návštěvě. Tyto cookies nevyžadují souhlas.</p>
+    <h3>Analytické cookies — Google Analytics</h3>
+    <p>Pokud udělíte souhlas, používáme <b>Google Analytics 4</b> od společnosti Google Ireland Limited. Slouží nám ke zjištění, kolik lidí web navštíví, které stránky si prohlížejí a kolik z nich dokončí poptávku. Nezobrazujeme reklamu a údaje nepoužíváme k profilování jednotlivců.</p>
+    <p>Měření je nastaveno s <b>anonymizací IP adresy</b> a spouští se <b>až po vašem souhlasu</b>. Dokud souhlas neudělíte, žádný analytický skript se nenačte. Právním základem je souhlas podle čl. 6 odst. 1 písm. a) GDPR.</p>
+    <p>Google může údaje zpracovávat i mimo Evropský hospodářský prostor; předávání je kryto standardními smluvními doložkami Evropské komise. Údaje v Google Analytics se uchovávají nejvýše 14 měsíců.</p>
+    <h3>Změna volby</h3>
+    <p>Souhlas můžete kdykoli změnit odkazem <b>Nastavení cookies</b> v patičce kterékoli stránky. Cookies lze smazat i přímo v nastavení prohlížeče.</p>
 
     <h2 id="g9">9. Změny dokumentu</h2>
     <p>Dokument můžeme aktualizovat. Aktuální znění je vždy dostupné na této stránce spolu s datem účinnosti.</p>
@@ -165,7 +172,7 @@
     </div>
     <div class="foot-b">
       <span>© 2026 Danubra — ubytování pro vyslané pracovníky ve střední Evropě</span>
-      <div class="foot-legal"><a href="obchodne-podmienky.html">Obchodní podmínky</a><a href="ochrana-osobnych-udajov.html">Ochrana osobních údajů</a><a href="kontakt.html">Kontakt</a><span>SK · CZ · HU · DE</span></div>
+      <div class="foot-legal"><a href="#" data-cookies>Nastavení cookies</a><a href="obchodne-podmienky.html">Obchodní podmínky</a><a href="ochrana-osobnych-udajov.html">Ochrana osobních údajů</a><a href="kontakt.html">Kontakt</a><span>SK · CZ · HU · DE</span></div>
     </div>
   </div>
 </footer>
@@ -208,5 +215,6 @@
     addEventListener('keydown',function(e){ if(e.key==='Escape'){ w.classList.remove('on'); b.setAttribute('aria-expanded','false'); } });
   })();
 </script>
+<script src="../cookies.js"></script>
 </body>
 </html>

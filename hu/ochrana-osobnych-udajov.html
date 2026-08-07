@@ -11,7 +11,7 @@
 <meta name="description" content="Hogyan kezeli a Danubra az igénylési űrlapból és a kommunikációból származó személyes adatokat.">
 <!-- DOČASNÉ: pred spustením zmaž nasledujúci riadok -->
 <meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="../styl.css?v=10">
+<link rel="stylesheet" href="../styl.css?v=11">
 </head>
 <body>
 
@@ -131,7 +131,14 @@
 
     <h2 id="g8">8. Sütik és látogatottságmérés</h2>
     <p>A weboldal a működéséhez szükséges technikai sütiket használ. Ezekhez nem kell hozzájárulás.</p>
-    <p>A weboldal nem használ harmadik féltől származó hirdetési vagy nyomkövető eszközöket, és nem tárol sütiket a látogatók profilozására. Ha a jövőben látogatottságmérést vezetnénk be, azt feltüntetjük ebben a dokumentumban, és szükség esetén hozzájárulási sávot jelenítünk meg.</p>
+    <h3>Szükséges sütik</h3>
+    <p>A weboldal egyetlen adatot tárol arról, milyen választást tett a hozzájárulási sávban. Enélkül minden látogatáskor újra rákérdeznénk. Ezek a sütik nem igényelnek hozzájárulást.</p>
+    <h3>Analitikai sütik — Google Analytics</h3>
+    <p>Hozzájárulás esetén <b>Google Analytics 4</b> szolgáltatást használunk (Google Ireland Limited). Arra szolgál, hogy lássuk, hányan látogatják a weboldalt, mely oldalakat nézik meg, és hányan fejezik be az igénylést. Nem jelenítünk meg hirdetést, és az adatokat nem használjuk egyének profilozására.</p>
+    <p>A mérés <b>IP-cím-anonimizálással</b> működik, és <b>csak az Ön hozzájárulása után</b> indul el. Amíg nem járul hozzá, semmilyen analitikai szkript nem töltődik be. A jogalap a hozzájárulás a GDPR 6. cikk (1) bek. a) pontja szerint.</p>
+    <p>A Google az adatokat az Európai Gazdasági Térségen kívül is kezelheti; az adattovábbítást az Európai Bizottság általános szerződési feltételei fedik. A Google Analyticsben az adatokat legfeljebb 14 hónapig őrizzük.</p>
+    <h3>A választás módosítása</h3>
+    <p>A hozzájárulást bármikor módosíthatja bármelyik oldal láblécében a <b>Süti beállítások</b> hivatkozással. A sütiket a böngésző beállításaiban is törölheti.</p>
 
     <h2 id="g9">9. A dokumentum módosításai</h2>
     <p>A dokumentumot frissíthetjük. A hatályos szöveg a hatálybalépés dátumával együtt mindig elérhető ezen az oldalon.</p>
@@ -165,7 +172,7 @@
     </div>
     <div class="foot-b">
       <span>© 2026 Danubra — szállás kiküldött munkavállalóknak Közép-Európában</span>
-      <div class="foot-legal"><a href="obchodne-podmienky.html">Általános szerződési feltételek</a><a href="ochrana-osobnych-udajov.html">Adatvédelem</a><a href="kontakt.html">Kapcsolat</a><span>SK · CZ · HU · DE</span></div>
+      <div class="foot-legal"><a href="#" data-cookies>Süti beállítások</a><a href="obchodne-podmienky.html">Általános szerződési feltételek</a><a href="ochrana-osobnych-udajov.html">Adatvédelem</a><a href="kontakt.html">Kapcsolat</a><span>SK · CZ · HU · DE</span></div>
     </div>
   </div>
 </footer>
@@ -208,5 +215,6 @@
     addEventListener('keydown',function(e){ if(e.key==='Escape'){ w.classList.remove('on'); b.setAttribute('aria-expanded','false'); } });
   })();
 </script>
+<script src="../cookies.js"></script>
 </body>
 </html>
